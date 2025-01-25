@@ -16,7 +16,7 @@ const Login = () => {
   const isAuthenticated = localStorage.getItem('token');
 
   if (isAuthenticated) {
-    return <Navigate to="/dashboard" replace />;
+    return <Navigate to="/feed" replace />;
   }
 
   const handleSubmit = async (e) => {
