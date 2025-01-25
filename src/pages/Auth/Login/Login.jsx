@@ -27,7 +27,7 @@ const Login = () => {
     try {
       const data = await authService.login(formData);
       localStorage.setItem('token', data.token);
-      navigate('/dashboard');
+      navigate('/feed');
     } catch (err) {
       setError(err.message);
     } finally {
