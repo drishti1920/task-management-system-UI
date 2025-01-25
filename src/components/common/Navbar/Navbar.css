@@ -1,0 +1,165 @@
+.navbar {
+    background-color: #ffffff;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .navbar-brand h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: 600;
+  }
+  
+  .menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 24px;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+    position: absolute;
+    transition: all 0.3s ease;
+  }
+  
+  .menu-toggle span:first-child {
+    top: 0;
+  }
+  
+  .menu-toggle span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .menu-toggle span:last-child {
+    bottom: 0;
+  }
+  
+  .navbar-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .navbar-links a {
+    color: #666;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+  }
+  
+  .navbar-links a:hover,
+  .navbar-links a.active {
+    color: #0d2347;
+    background-color: #dae7fc;
+    
+  }
+  
+  .logout-btn {
+    background-color: #1E4178;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  
+  .logout-btn:hover {
+    background-color: #0d2347;
+    transform: translateY(-1px);
+  }
+  
+  @media (max-width: 768px) {
+    .navbar {
+      padding: 1rem;
+      flex-wrap: wrap;
+    }
+  
+    .navbar-brand {
+      width: 100%;
+      justify-content: space-between;
+    }
+  
+    .menu-toggle {
+      display: block;
+    }
+  
+    .navbar-links {
+      display: none;
+      width: 100%;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1rem 0;
+      gap: 1rem;
+    }
+  
+    .navbar-links.active {
+      display: flex;
+      animation: slideDown 0.3s ease-out forwards;
+    }
+  
+    .navbar-links a {
+      width: 100%;
+      padding: 0.75rem 0;
+    }
+  
+    .logout-btn {
+      width: 100%;
+      text-align: center;
+      margin-top: 0.5rem;
+    }
+  }
+  
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Optional: Add animation for menu toggle */
+  .menu-toggle.active span:first-child {
+    transform: rotate(45deg) translate(6px, 6px);
+  }
+  
+  .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .menu-toggle.active span:last-child {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }

@@ -1,0 +1,46 @@
+.task-card {
+  background: white;
+  border-radius: 6px;
+  padding: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.task-content {
+  flex: 1;
+  margin-right: 12px;
+}
+
+.task-content h4 {
+  margin: 0 0 8px;
+  color: #333;
+  font-size: 1rem;
+}
+
+.task-content p {
+  margin: 0;
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: #ff4444;
+  cursor: pointer;
+  padding: 4px;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.delete-btn:hover {
+  opacity: 1;
+}
+
+.task-card.dragging {
+  opacity: 0.5;
+} 

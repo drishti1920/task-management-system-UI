@@ -1,0 +1,30 @@
+.task-column {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.task-column h3 {
+  margin: 0 0 16px;
+  color: #333;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.task-list {
+  min-height: 100px;
+  padding: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.task-list > * {
+  margin-bottom: 8px;
+}
+
+.task-list > *:last-child {
+  margin-bottom: 0;
+}
+
+.task-column.drag-over {
+  background-color: #e8e8e8;
+} 
